@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Welcome You",
+  "version": "1.0",
+  "description": "Show a welcome page on new tab",
+  "homepage_url": "https://github.com/Toinane/welcome-webextension",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "welcome.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    "background.png"
+  ]
+}
