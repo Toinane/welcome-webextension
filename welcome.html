@@ -14,11 +14,11 @@
          }
          .background{
             position: absolute;
-         	top: -18px; left: -18px;
-         	width: 110%;
-         	height: 107%;
+           	top: -18px; left: -18px;
+           	width: 110%;
+           	height: 107%;
             background: url("https://source.unsplash.com/collection/377269/1920x1080") no-repeat, url('background.png') no-repeat, #777;
-         	filter: blur(10px);
+         	  filter: blur(10px);
             background-size: cover;
             text-align: center;
          }
@@ -31,6 +31,7 @@
          }
          .center{
             position: absolute;
+            margin-top: -40px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -39,7 +40,7 @@
             text-align: center;
          }
             aside h2{
-               font-size: 7.5em;
+               font-size: 7em;
                color: white;
             }
             aside h1{
@@ -84,6 +85,31 @@
             color: white;
             font-size: 1.2em;
          }
+         #edit{
+           position: absolute;
+           right: 20px;
+           top: 20px;
+           cursor: pointer;
+           color: white;
+           font-size: 1.2em;
+           z-index: 10000;
+         }
+         #settings{
+            display: none;
+            position: absolute;
+            top: 50px;
+            z-index: 10000;
+            right: 30px;
+            width: 500px;
+            height: 200px;
+            border: none;
+            font-family: sans-serif;
+            padding: 10px;
+            font-size: 0.8em;
+            color: #333;
+            resize: none;
+         }
+
          #note-cursor{
             display: none;
             position: absolute;
@@ -131,23 +157,13 @@
             .shortlinks a:hover{
                border: 1px solid white !important;
             }
-            #youtube{
-               border: 1px solid #c4302b;
-               background: #c4302b;
-            }
-            #sixplay{
-               border: 1px solid #264365;
-               background: #264365;
-            }
-            #tweetdeck{
-               border: 1px solid #2b7bb9;
-               background: #2b7bb9;
-            }
       </style>
    </head>
    <body>
       <div class="background"></div>
       <p class="date"></p>
+      <p id="edit">Settings</p>
+      <textarea id="settings"></textarea>
       <section class="center">
          <aside>
             <h2></h2>
@@ -157,17 +173,8 @@
             </form>
          <aside>
       </section>
-      <section class="shortlinks">
-         <a id="youtube" href="https://youtube.fr">Youtube</a>
-         <a id="sixplay" href="http://6play.fr">6play</a>
-         <a id="tweetdeck" href="https://tweetdeck.twitter.com/">TweetDeck</a>
-      </section>
-      <section class="links">
-         <li><a href="http://localhost">Localhost</a></li>
-         <li><a href="https://github.com">Github</a></li>
-         <li><a href="https://developer.mozilla.org/fr/">MDN</a></li>
-         <li><a href="https://www.google.fr/maps">Google Maps</a></li>
-      </section>
+      <section class="shortlinks" id="card"></section>
+      <section class="links" id="link"></section>
       <p id="open-note">Notes</p>
       <div id="note-cursor"></div>
       <textarea id="note"></textarea>
