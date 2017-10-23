@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Welcome You",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Show a welcome page on new tab",
   "homepage_url": "https://github.com/Toinane/welcome-webextension",
   "icons": {
